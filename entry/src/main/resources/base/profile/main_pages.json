@@ -1,5 +1,11 @@
 {
   "src": [
-    "pages/Index"
+    "pages/Index",
+    "pages/login/index",
+    "pages/home/index",
+    "pages/demo/Index",
+    "pages/demo/LayoutDemo",
+    "pages/demo/StyleDemo",
+    "pages/demo/ComponentDemo"
   ]
 }
