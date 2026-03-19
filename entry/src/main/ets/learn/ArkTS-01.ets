@@ -180,6 +180,7 @@ export function runLesson01(): void {
 
   // ③ function 函数
   // 箭头函数
+
   let multiply = (x: number, y: number): number => x * y;
   let square = (n: number): number => n * n;
   console.log(`${TAG} addNumbers(3,5) = ${addNumbers(3, 5)}`);
@@ -392,7 +393,7 @@ export function runLesson01(): void {
   console.log(`${TAG} 2 + 3 * 4 = ${2 + 3 * 4}`);       // 14（先乘后加）
   console.log(`${TAG} (2 + 3) * 4 = ${(2 + 3) * 4}`);   // 20（括号优先）
 
-  let r1: boolean = true || false && false;
+  let r1: boolean = true || (false && false);
   console.log(`${TAG} true || false && false = ${r1}`);  // true（&& 优先于 ||）
 
   let r2: boolean = (true || false) && false;

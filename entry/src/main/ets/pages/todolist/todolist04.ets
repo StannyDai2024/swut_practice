@@ -1,3 +1,4 @@
+
 /**
  * 第四步：完成联动
  *
@@ -13,13 +14,18 @@ interface Todo {
 @Component
 struct Index {
   @State message: string = 'Hello World';
-  @State todoList: Todo[] = [
+  @State @Watch('onDataChange') todoList: Todo[] = [
     { name: '问题1', completed: true },
     { name: '问题2', completed: false },
     { name: '问题3', completed: false }
   ]
   @State completedNum: number = this.todoList.filter((item => item.completed)).length;
   @State totalNum: number = this.todoList.length;
+
+  onDataChange() {
+    this.completedNum = this.todoList.filter((item => item.completed)).length;
+    this.totalNum = this.todoList.length;
+  }
 
   build() {
     Column({ space: 30 }) {
@@ -53,7 +59,7 @@ struct Index {
             Text(`状态：${todo.completed ? '已完成' : '未完成'}`)
               .onClick(() => {
                 this.todoList = this.todoList.map((item, idx) => {
-                  if (idx === index) {
+                  if (idx===index) {
                     item.completed = !item.completed;
                   }
                   return item;
@@ -61,6 +67,7 @@ struct Index {
               })
           }
         })
+
       }.width('100%').alignItems(HorizontalAlign.Start)
 
       //  添加按钮

@@ -12,13 +12,6 @@ struct ArkTS01 {
 
   aboutToAppear(): void {
     runLesson01();
-
-    console.log('111', 22)
-    const array = [1,2,3,4]
-    const doubleArray = array.map(item => item * 2)
-    const arr = array.filter(item => item % 2 ===0)
-    console.log('', arr)
-
   }
 
   build() {

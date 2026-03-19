@@ -80,7 +80,5 @@ struct LoginPage {
     }
     .width('100%')
     .height('100%')
-    .justifyContent(FlexAlign.Start)
-    .alignItems(HorizontalAlign.Center)
   }
 }
