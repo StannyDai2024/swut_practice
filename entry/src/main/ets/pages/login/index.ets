@@ -25,8 +25,14 @@ struct LoginPage {
       this.errorMsg = '密码至少6位';
       return false;
     }
-    this.errorMsg = '';
-    return true;
+
+    if (this.username === 'admin' && this.password==='123456') {
+      return true;
+    } else {
+      this.errorMsg = '用户名密码不对';
+    }
+
+    return false;
   }
 
   build() {

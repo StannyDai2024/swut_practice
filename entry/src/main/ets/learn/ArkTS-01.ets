@@ -24,6 +24,9 @@
  *    g. 运算符优先级
  */
 
+
+
+
 // ========== 需要在函数外部声明的类型 ==========
 
 interface StudentInfo {
@@ -66,6 +69,19 @@ const TAG = '[ArkTS-01]';
 // ========== 教学主函数 ==========
 
 export function runLesson01(): void {
+
+
+  let num: number = 3;
+  switch (num) {
+    case 1:
+      console.log("One");
+    case 2:
+      console.log("Two")
+    case 3:
+      console.log("Three")
+    default:
+      console.log("Default")
+  }
 
   // ============================================================
   // 1. 变量声明（let）
